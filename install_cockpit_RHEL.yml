@@ -1,0 +1,22 @@
+---
+- name: cockpit
+  hosts: all
+  tasks:
+  - name: Install cockpit packages 
+    yum:
+      name: cockpit
+      state: present
+  - name: open port       
+    firewalld:
+      port: 9090/tcp
+      permanent: yes
+      state: enabled    
+  - name: Restart service cockpit, in all cases
+    service:
+      name: cockpit.socket
+      state: restarted
+  - name: Enable service cockpit, and not touch the state
+    service:
+      name: cockpit.socket
+      enabled: yes    
+...
