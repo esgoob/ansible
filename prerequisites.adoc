@@ -1,0 +1,13 @@
+RHEL Automation with Ansible - Latam Tech Office Workshop series Table of Contents
+
+Description The Ansible tool, as described officially defines "a radically simple IT automation engine that automates cloud provisioning, configuration management, application deployment, intra-service orchestration, and many other IT needs."
+
+Audience
+
+IT Managers, Architects and technical staff who operates Linux
+
+Create a virtual Environment for the workshop 3.1Install Virtualbox Download virtualbox from https://www.virtualbox.org/wiki/Downloads 3.2 Download the RHEL 8x and create a minimal virtual machine 3.3 Minimals requiriments for RHEL 20Gb H.D 4Gb RAM 1 NIC
+
+Register the server with your development account. You can get the developer subscription at https://developers.redhat.com/register.
+
+Download a valid license for Ansible Tower from https://www.redhat.com/en/technologies/management/ansible/try-it or pull a request NFR license on OPEN https://partnercenter.redhat.com/NFR_Redirect
