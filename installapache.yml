@@ -1,0 +1,22 @@
+---
+- hosts: all
+  tasks:
+    - name: install apache2
+      package: name=apache2 state=latest
+    - name: install apache2
+      package:
+         name: httpd
+         state: latest
+      become: yes
+    - name: index.html
+      copy:
+         content: "this is a webpage"
+         dest: /var/www/html/index.html
+      become: yes
+    - name: restart apache2
+      service:
+          name: apache2
+          state: restarted
+          enabled: yes
+      become: yes
+    
