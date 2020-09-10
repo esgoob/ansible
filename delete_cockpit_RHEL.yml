@@ -1,0 +1,14 @@
+---
+- name: cockpit
+  hosts: all
+  tasks:
+  - name: Uninstall cockpit packages 
+    yum:
+      name: cockpit
+      state: removed
+  - name: open port       
+    firewalld:
+      port: 9090/tcp
+      permanent: yes
+      state: disabled        
+...
